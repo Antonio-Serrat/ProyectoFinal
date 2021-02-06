@@ -2,10 +2,8 @@ package entidades;
 
 
 public  class Cuentas {
-	private String Usuario;
+	private  String Usuario;
 	private int Contraseña;
-
-	
 
 
 	public String getUsuario() {
@@ -23,5 +21,12 @@ public  class Cuentas {
 	public void setContraseña(int contraseña) {
 		Contraseña = contraseña;
 	}
+	
+	
+	
+	
+	
+	
+	
 }
 

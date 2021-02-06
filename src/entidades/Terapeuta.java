@@ -1,10 +1,10 @@
 package entidades;
 
-public class Terapeuta extends Cuentas {
+public class Terapeuta  {
 	private String Nombre;
 	private int Identificacion;
 	private String Especialidad;
-	
+	private Cuentas cuenta = new Cuentas();
 	
 	
 	public String getNombre() {
@@ -31,8 +31,8 @@ public class Terapeuta extends Cuentas {
 		Especialidad = especialidad;
 	}
 	
-	public void Titular() {
-		System.out.println("El usuario de esta cuenta es "+this.getNombre()+".  Y se especializa como "+this.getEspecialidad());
+	public void agregarCuenta(Cuentas cuenta) {
+		cuenta = new Cuentas();
 	}
 }
 	
