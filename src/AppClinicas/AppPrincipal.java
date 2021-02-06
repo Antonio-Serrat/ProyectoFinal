@@ -1,4 +1,4 @@
-package AppFloresBach;
+package AppClinicas;
 
 import entidades.*;
 
