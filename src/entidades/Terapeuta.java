@@ -34,6 +34,12 @@ public class Terapeuta  {
 	public void agregarCuenta(Cuentas cuenta) {
 		cuenta = new Cuentas();
 	}
+	
+	
+	
+	
+	
+	
 }
 	
 	
