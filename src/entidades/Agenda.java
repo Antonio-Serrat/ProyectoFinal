@@ -1,5 +1,18 @@
 package entidades;
 
-public class Agenda extends Terapeuta {
+import java.util.Calendar;
+
+public class Agenda {
+	
+	private Calendar Calendario;
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
