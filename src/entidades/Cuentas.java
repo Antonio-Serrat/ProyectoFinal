@@ -3,7 +3,7 @@ package entidades;
 
 public  class Cuentas {
 	private String Usuario;
-	private int Contraseña;
+	private int ContraseÃ±a;
 
 	
 
@@ -16,12 +16,12 @@ public  class Cuentas {
 		Usuario = usuario;
 	}
 	
-	public int getContraseña() {
-		return Contraseña;
+	public int getContraseÃ±a() {
+		return ContraseÃ±a;
 	}
 	
-	public void setContraseña(int contraseña) {
-		Contraseña = contraseña;
+	public void setContraseÃ±a(int contraseÃ±a) {
+		ContraseÃ±a = contraseÃ±a;
 	}
 }
 
