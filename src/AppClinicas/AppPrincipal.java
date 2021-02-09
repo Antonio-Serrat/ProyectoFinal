@@ -8,7 +8,7 @@ import entidades.*;
 			
 			Cuentas cuenta1 = new Cuentas();
 			cuenta1.setUsuario("Antonio");
-			cuenta1.setContraseña(123456);
+			cuenta1.setContraseÃ±a(123456);
 			
 			Terapeuta terapeuta1 = new Terapeuta();
 			terapeuta1.setNombre("Antonio Serrat");
