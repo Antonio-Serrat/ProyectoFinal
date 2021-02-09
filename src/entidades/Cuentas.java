@@ -6,6 +6,7 @@ public  class Cuentas {
 	private int Contraseña;
 
 
+
 	public String getUsuario() {
 		return Usuario;
 	}
