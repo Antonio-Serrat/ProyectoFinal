@@ -2,7 +2,7 @@ package entidades;
 
 
 public  class Cuentas {
-	private  String Usuario;
+	private String Usuario;
 	private int Contraseña;
 
 
