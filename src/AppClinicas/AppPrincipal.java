@@ -16,7 +16,7 @@ import entidades.*;
 			terapeuta1.setEspecialidad("Terapeuta Floral");
 			terapeuta1.agregarCuenta(cuenta1);
 		
-		
+		System.out.println(terapeuta1.getEspecialidad()+" "+terapeuta1.getNombre() +" "+terapeuta1.toString());
 		
 			
 			
