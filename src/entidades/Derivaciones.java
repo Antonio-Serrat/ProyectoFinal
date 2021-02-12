@@ -1,8 +1,7 @@
 package entidades;
 
-public class Derivaciones extends Pacientes {
+public class Derivaciones  {
 
-	private String Derivacion;
 	
 	
 	

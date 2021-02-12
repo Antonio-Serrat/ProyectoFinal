@@ -1,6 +1,6 @@
 package entidades;
 
-public class HistoriaClinica extends Pacientes {
+public class HistoriaClinica  {
 
 	
 	
