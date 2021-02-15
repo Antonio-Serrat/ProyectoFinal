@@ -1,8 +1,8 @@
-package entidades;
+package entities;
 
 import java.util.Date;
 
-public class Turnos extends Agenda {
+public class Turn extends Agenda {
 
 	
 		private Date fecha;

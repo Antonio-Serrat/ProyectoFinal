@@ -1,6 +1,6 @@
-package entidades;
+package entities;
 
-public class Derivaciones  {
+public class Derivations  {
 
 	
 	

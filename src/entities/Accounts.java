@@ -1,42 +1,42 @@
-package entidades;
+package entities;
 
 import java.util.List;
 import java.util.ArrayList;
 
-public  class Cuenta {
-	private String Usuario;
-	private String Contraseña;
-	public static List <Terapeuta> listaUsers;
+public  class Accounts {
+	private String User;
+	private String Password;
+	public static List <Therapist> UserList;
 
 
-	public Cuenta(String Usuario, String Contraseña){
-		this.Contraseña = Contraseña;
-		this.Usuario = Usuario;
-		this.listaUsers = new ArrayList<>();
+	public Accounts(String User, String Password){
+		this.Password = Password;
+		this.User = User;
+		this.UserList = new ArrayList<>();
 	}
 
-	public String getUsuario() {
-		return Usuario;
+	public String getUser() {
+		return User;
 	}
 	
-	public void setUsuario(String usuario) {
-		Usuario = usuario;
+	public void setUser(String user) {
+		User = user;
 	}
 	
-	public String getContraseña() {
-		return Contraseña;
+	public String getPassword() {
+		return Password;
 	}
 	
-	public void setContraseña(String contraseña) {
-		Contraseña = contraseña;
+	public void setPassword(String password) {
+		Password = password;
 	}
 	
-	public List<Terapeuta> getListaUsers() {
-		return listaUsers;
+	public List<Therapist> getUsersList() {
+		return UserList;
 	}
 	
-	public void setListaUsers(Terapeuta terapeuta) {
-		this.listaUsers = (List<Terapeuta>) listaUsers;
+	public void setUserList(Therapist therapist) {
+		this.UserList =  (List<Therapist>) UserList;
 	}
 	
 	

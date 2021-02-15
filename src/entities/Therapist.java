@@ -1,43 +1,39 @@
-package entidades;
+package entities;
 
 import java.util.List;
 
-public class Terapeuta {
-	private String Nombre;
-	private int Identificacion;
-	private String Especialidad;
-	private Cuenta cuentas = new Cuenta(null, null);
+public class Therapist {
+	private String Name;
+	private int Id;
+	private String Specialty;
 	
-	public Terapeuta(Cuenta cuenta) {
-		this.cuentas = cuenta;
-	}
 
-	public String getNombre() {
-		return Nombre;
+	public String getName() {
+		return Name;
 	}
 	
-	public void setNombre(String nombre) {
-		Nombre = nombre;
+	public void setName(String name) {
+		Name = name;
 	}
 	
-	public int getIdentificacion() {
-		return Identificacion;
+	public int getId() {
+		return Id;
 	}
 	
-	public void setIdentificacion(int identificacion) {
-		Identificacion = identificacion;
+	public void setId(int id) {
+		Id = id;
 	}
 	
-	public String getEspecialidad() {
-		return Especialidad;
+	public String getSpecialty() {
+		return Specialty;
 	}
 	
-	public void setEspecialidad(String especialidad) {
-		Especialidad = especialidad;
+	public void setSpecialty(String specialty) {
+		Specialty = specialty;
 	}
 	
-	public static void agregarCuenta(Cuenta cuenta) {
-		cuenta = new Cuenta("" , "" );
+	public static void agregarCuenta(Accounts accounts) {
+		accounts = new Accounts("" , "");
 	}
 	
 	

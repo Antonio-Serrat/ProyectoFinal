@@ -1,17 +1,17 @@
-package entidades;
+package entities;
 
 import java.util.Calendar;
 
 public class Agenda {
 	
-	private Calendar Calendario;
+	private Calendar Calendar;
 
-	public Calendar getCalendario() {
-		return Calendario;
+	public Calendar getCalendar() {
+		return Calendar;
 	}
 
-	public void setCalendario(Calendar calendario) {
-		Calendario = calendario;
+	public void setCalendar(Calendar calendar) {
+		Calendar = calendar;
 	}
 	
 	

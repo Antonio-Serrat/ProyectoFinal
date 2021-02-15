@@ -1,38 +1,38 @@
-package entidades;
+package entities;
 
 import java.util.Date;
 
-public class Tratamiento  {
+public class Treatment  {
 
-	private Date Fecha;
-	private String Prescripcion;
-	private String Evolucion;
-	private String Observaciones;
+	private Date Date;
+	private String Prescription;
+	private String Evolution;
+	private String Observations;
 	
 	
-	public Date getFecha() {
-		return Fecha;
+	public Date getDate() {
+		return Date;
 	}
-	public void setFecha(Date fecha) {
-		Fecha = fecha;
+	public void setDate(Date date) {
+		Date = date;
 	}
-	public String getPrescripcion() {
-		return Prescripcion;
+	public String getPrescription() {
+		return Prescription;
 	}
-	public void setPrescripcion(String prescripcion) {
-		Prescripcion = prescripcion;
+	public void setPrescription(String prescription) {
+		Prescription = prescription;
 	}
-	public String getEvolucion() {
-		return Evolucion;
+	public String getEvolution() {
+		return Evolution;
 	}
-	public void setEvolucion(String evolucion) {
-		Evolucion = evolucion;
+	public void setEvolution(String evolution) {
+		Evolution = evolution;
 	}
-	public String getObservaciones() {
-		return Observaciones;
+	public String getObservations() {
+		return Observations;
 	}
-	public void setObservaciones(String observaciones) {
-		Observaciones = observaciones;
+	public void setObservations(String observations) {
+		Observations = observations;
 	}
 	
 	

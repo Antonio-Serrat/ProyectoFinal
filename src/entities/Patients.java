@@ -1,35 +1,36 @@
-package entidades;
+package entities;
 
 import java.util.Date;
 
-public class Pacientes {
+public class Patients {
 	
-	private String Nombre;
-	private String Apellido;
+	private String Name;
+	private String Surname;
 	private String Email;
-	private int Telefono;
-	private String Direccion;
-	private Date FechaNacimiento;
-	private int Edad;
+	private int Phone;
+	private String Direction;
+	private Date Birthdate;
+	private int Age;
 	
-	public Pacientes(String Nombre, String Apellido, int Edad) {
-		this.Nombre = Nombre;
-		this.Apellido = Apellido;
-		this.Edad = Edad; 
+	public Patients(String Name, String Surname, int Age, int Phone) {
+		this.Name = Name;
+		this.Surname = Surname;
+		this.Age = Age; 
+		this.Phone = Phone;
 	}
 	
 	
-	public String getNombre() {
-		return Nombre;
+	public String getName() {
+		return Name;
 	}
-	public void setNombre(String nombre) {
-		Nombre = nombre;
+	public void setName(String name) {
+		Name = name;
 	}
-	public String getApellido() {
-		return Apellido;
+	public String getSurname() {
+		return Surname;
 	}
-	public void setApellido(String apellido) {
-		Apellido = apellido;
+	public void setSurname(String surname) {
+		Surname = surname;
 	}
 	public String getEmail() {
 		return Email;
@@ -37,29 +38,29 @@ public class Pacientes {
 	public void setEmail(String email) {
 		Email = email;
 	}
-	public int getTelefono() {
-		return Telefono;
+	public int getTelephone() {
+		return Phone;
 	}
-	public void setTelefono(int telefono) {
-		Telefono = telefono;
+	public void setTelephone(int phone) {
+		phone = phone;
 	}
-	public String getDireccion() {
-		return Direccion;
+	public String getDirection() {
+		return Direction;
 	}
-	public void setDireccion(String direccion) {
-		Direccion = direccion;
+	public void setDirection(String direction) {
+		Direction = direction;
 	}
-	public Date getFechaNacimiento() {
-		return FechaNacimiento;
+	public Date getBirthdate() {
+		return Birthdate;
 	}
-	public void setFechaNacimiento(Date fechaNacimiento) {
-		FechaNacimiento = fechaNacimiento;
+	public void setBirthdate(Date birdathe) {
+		Birthdate = birdathe;
 	}
-	public int getEdad() {
-		return Edad;
+	public int getAge() {
+		return Age;
 	}
-	public void setEdad(int edad) {
-		Edad = edad;
+	public void setAge(int age) {
+		Age = age;
 	}
 	
 	
