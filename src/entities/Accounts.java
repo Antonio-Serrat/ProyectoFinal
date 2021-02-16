@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public  class Accounts {
 	private String User;
 	private String Password;
-	public static List <Therapist> userList;
+	public static List <Accounts> userList;
 
 
 	public Accounts(String User, String Password){
@@ -19,33 +19,33 @@ public  class Accounts {
 		return User;
 	}
 	
-	public void setUser(String user) {
-		User = user;
+	public void setUser(String User) {
+		User = User;
 	}
 	
 	public String getPassword() {
 		return Password;
 	}
 	
-	public void setPassword(String password) {
-		Password = password;
+	public void setPassword(String Password) {
+		Password = Password;
 	}
 	
-	public List<Therapist> getUsersList() {
+	public List<Accounts> getUsersList() {
 		return userList;
 	}
 	
 	public void setUserList(Therapist therapist) {
-		this.userList =  (List<Therapist>) userList;
+		this.userList =  (List<Accounts>) userList;
 	}
 	
-	public void newUser(Therapist user) {
+	public void newUser(Accounts user) {
 		this.userList.add(user);;
 	}
 	
 	public void Users() {
-		for (Therapist user : userList) {
-			
+		for (Accounts user : userList) {
+			System.out.println(user.getUser() +" "+user.getPassword());
 		}
 	}
 	

@@ -32,12 +32,13 @@ import java.util.InputMismatchException;
 				break;
 			case 2: accounts = singIn(sc);
 				break;
+			case 3: System.out.println(String.format(" "+accounts.userList));
 			}
 		}
 	}
 
 		private static Accounts logIn(Scanner sc) {
-			Accounts accounts = new Accounts("","");
+			Accounts accounts = new Accounts("", "");
 			
 			System.out.println("Welcome to D.B. Salud");
 			System.out.println("****************************");
@@ -46,7 +47,7 @@ import java.util.InputMismatchException;
 			accounts.setUser(sc.nextLine());
 			System.out.println("Ingrese su nueva contraseña");
 			accounts.setPassword(sc.nextLine());
-			
+			accounts.newUser(accounts);
 			
 			return accounts;
 			
