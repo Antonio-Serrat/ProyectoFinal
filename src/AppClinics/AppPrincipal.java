@@ -9,8 +9,6 @@ import java.util.InputMismatchException;
 
 	public class AppPrincipal {
 
-		
-
 		public static void main(String[] args) {
 			Accounts accounts = null;
 			
@@ -30,15 +28,15 @@ import java.util.InputMismatchException;
 			sc.nextLine();
 		
 			switch (opcion) {
-			case 1: accounts = newAccount(sc);
+			case 1: accounts = logIn(sc);
 				break;
-			case 2: accounts = logIn(sc);
+			case 2: accounts = singIn(sc);
 				break;
 			}
 		}
 	}
 
-		private static Accounts newAccount(Scanner sc) {
+		private static Accounts logIn(Scanner sc) {
 			Accounts accounts = new Accounts("","");
 			
 			System.out.println("Welcome to D.B. Salud");
@@ -54,9 +52,9 @@ import java.util.InputMismatchException;
 			
 		}
 		
-		private static Accounts logIn(Scanner sc) {
+		private static Accounts singIn(Scanner sc) {
 			
-			if(Accounts.UserList != null) {
+			if(Accounts.userList != null) {
 				System.out.println("Que gusto volver a vernos!");
 				System.out.println("********************");
 				System.out.println("Ingrese su Usuario");

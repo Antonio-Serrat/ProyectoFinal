@@ -6,13 +6,13 @@ import java.util.ArrayList;
 public  class Accounts {
 	private String User;
 	private String Password;
-	public static List <Therapist> UserList;
+	public static List <Therapist> userList;
 
 
 	public Accounts(String User, String Password){
 		this.Password = Password;
 		this.User = User;
-		this.UserList = new ArrayList<>();
+		this.userList = new ArrayList<>();
 	}
 
 	public String getUser() {
@@ -32,14 +32,22 @@ public  class Accounts {
 	}
 	
 	public List<Therapist> getUsersList() {
-		return UserList;
+		return userList;
 	}
 	
 	public void setUserList(Therapist therapist) {
-		this.UserList =  (List<Therapist>) UserList;
+		this.userList =  (List<Therapist>) userList;
 	}
 	
+	public void newUser(Therapist user) {
+		this.userList.add(user);;
+	}
 	
+	public void Users() {
+		for (Therapist user : userList) {
+			
+		}
+	}
 	
 	
 	
