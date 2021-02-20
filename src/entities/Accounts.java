@@ -1,56 +1,54 @@
 package entities;
 
 import java.util.List;
+import java.util.Scanner;
 import java.util.ArrayList;
 
 public  class Accounts {
-	private String User;
+	private String Username;
 	private String Password;
-	public static List <Accounts> userList;
+	public static List <Therapist> userList;
+	
 
 
-	public Accounts(String User, String Password){
-		this.Password = Password;
-		this.User = User;
+	public Accounts(String User, String pass){
+		this.Password = pass;
+		this.Username = User;
 		this.userList = new ArrayList<>();
 	}
 
-	public String getUser() {
-		return User;
+	public String User() {
+		return Username +""+ Password;
+		
+	}
+
+	public String getUsername() {
+		return Username;
 	}
 	
-	public void setUser(String User) {
-		User = User;
+	public void setUsername(String username) {
+		Username = username;
 	}
 	
 	public String getPassword() {
 		return Password;
 	}
 	
-	public void setPassword(String Password) {
-		Password = Password;
+	public void setPassword(String password) {
+		Password = password;
 	}
 	
-	public List<Accounts> getUsersList() {
+	public List<Therapist> getUsersList() {
 		return userList;
 	}
 	
 	public void setUserList(Therapist therapist) {
-		this.userList =  (List<Accounts>) userList;
+		this.userList.add(therapist);
 	}
-	
-	public void newUser(Accounts user) {
-		this.userList.add(user);;
+
+	public void newUser(Therapist therapist) {
+		this.userList.add(therapist);
 	}
-	
-	public void Users() {
-		for (Accounts user : userList) {
-			System.out.println(user.getUser() +" "+user.getPassword());
-		}
-	}
-	
-	
-	
 	
 	
 	
