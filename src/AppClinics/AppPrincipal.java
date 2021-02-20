@@ -3,6 +3,8 @@ package AppClinics;
 import java.util.List;
 import java.util.Scanner;
 
+import javax.security.auth.login.AccountException;
+
 import entities.*;
 
 import java.util.InputMismatchException;
@@ -32,54 +34,73 @@ import java.util.InputMismatchException;
 				break;
 			case 2: accounts = singIn(sc);
 				break;
-			case 3: System.out.println(String.format(" "+accounts.userList));
+
 			}
 		}
 	}
 
 		private static Accounts logIn(Scanner sc) {
-			Accounts accounts = new Accounts("", "");
 			
+			System.out.println("****************************");
 			System.out.println("Welcome to D.B. Salud");
 			System.out.println("****************************");
-
-			System.out.println("Por favor ingrese su nombre de usuario");
-			accounts.setUser(sc.nextLine());
-			System.out.println("Ingrese su nueva contraseña");
-			accounts.setPassword(sc.nextLine());
-			accounts.newUser(accounts);
 			
-			return accounts;
-			
+			System.out.println("******Datos Personales******");
+			System.out.println("Por favor ingrese su nombre ");
+			String Name = (sc.nextLine());
+			System.out.println("Ingrese su ocupación");
+			String Specialty = (sc.nextLine());
+			System.out.println("******Datos de Usuario******");
+			System.out.println("Ingrese su Nombre de usuario");
+			String usrName = sc.nextLine();
+			System.out.println("Ingrese su Contraseña");
+			String pass = sc.nextLine();
+			System.out.println("****************************");
+			System.out.println("****¡Log in completado!*****");
+			Therapist therapist = new Therapist(Name, Specialty); 
+			Accounts account = new Accounts(usrName, pass);
+			account.newUser(therapist);
+			therapist.newAccount(account);
+		
+			return null;
 		}
 		
-		private static Accounts singIn(Scanner sc) {
-			
+		public static Accounts singIn(Scanner sc) {
+			 
+			Therapist therapist = new Therapist(null, null);
+			therapist.getAccountsList();
 			if(Accounts.userList != null) {
+				
 				System.out.println("Que gusto volver a vernos!");
-				System.out.println("********************");
+				System.out.println("****************************");
 				System.out.println("Ingrese su Usuario");
 				String user = sc.nextLine();
 				System.out.println("Ingrese su Contraseña");
-				String password = sc.nextLine();
+				String pass = sc.nextLine();
+				Accounts account = new Accounts(user,pass);
+				
+				for(Accounts i : therapist.accountsList) {
+					if (account.User().equals(therapist.accountsList)) {
+						System.out.println("JAJA estamos logrando");
+					}
+				}
 			}
 			else 
 				System.out.println("Usted no posee una cuenta");
 				return null;
 		}
 		
-		private static Therapist newTherapist(Scanner sc) {
-			Therapist therapist = new Therapist();
-				System.out.println("Muchas gracias por utilizar D.B. Salud");
-				System.out.println("****************************");
-	
-				System.out.println("Por favor ingrese su nombre de usuario");
-				therapist.setName(sc.nextLine());
-				System.out.println("Ingrese su especialidad");
-				therapist.setSpecialty(sc.nextLine());
 				
-				
-				
-			return null;
-		}
+		
+		
 }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
