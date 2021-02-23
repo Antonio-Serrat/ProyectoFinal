@@ -7,14 +7,18 @@ import java.util.List;
 public class Therapist {
 	private  String Name;
 	private  String Specialty;
+	private String email;
+	private String tlf;
+	private String DNI;
 	private Date Agenda;
-	public static List <Accounts> accountsList;
+	//public static List <Accounts> accountsList;
 	public static List <Patients> patientsList;
 	
-	public Therapist(String name, String speciality) {
+	public Therapist(String name, String speciality, String email) {
 		this.Name = name;
 		this.Specialty = speciality;
-		this.accountsList = new ArrayList<>();
+		this.email = email;
+		//this.accountsList = new ArrayList<>();
 		this.patientsList = new ArrayList<>();	}
 
 	public  String getName() {
@@ -33,13 +37,6 @@ public class Therapist {
 		Specialty = specialty;
 	}
 
-	public  List<Accounts> getAccountsList() {
-		return accountsList;
-	}
-
-	public void setAccountList(Accounts accounts) {
-		this.accountsList.add(accounts);
-	}
 
 	public static List<Patients> getPatientsList() {
 		return patientsList;
@@ -49,14 +46,41 @@ public class Therapist {
 		Therapist.patientsList.add(patients);
 	}
 
-	public void newAccount(Accounts account) {
-		this.accountsList.add(account);
+	public String getEmail() {
+		return email;
 	}
-	 public void viewAccounts() {
-		 for (Accounts accounts : accountsList) {
-			 System.out.println("VA por ahi");
-		 }
-	 }
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getTlf() {
+		return tlf;
+	}
+
+	public void setTlf(String tlf) {
+		this.tlf = tlf;
+	}
+
+	public String getDNI() {
+		return DNI;
+	}
+
+	public void setDNI(String dNI) {
+		DNI = dNI;
+	}
+
+	//public  List<Accounts> getAccountsList() {
+	//return accountsList;
+	//}
+	
+	//public void setAccountList(Accounts accounts) {
+	//	this.accountsList.add(accounts);
+	//}
+//	public void newAccount(Accounts account) {
+//		this.accountsList.add(account);
+//	}
+
 	
 }
 	

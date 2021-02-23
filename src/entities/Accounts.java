@@ -2,19 +2,21 @@ package entities;
 
 import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public  class Accounts {
 	private String Username;
 	private String Password;
-	public static List <Therapist> userList;
+	public static Set<Therapist> userList;
 	
 
 
 	public Accounts(String User, String pass){
 		this.Password = pass;
 		this.Username = User;
-		this.userList = new ArrayList<>();
+		this.userList = new HashSet<>();
 	}
 
 	public String User() {
@@ -38,19 +40,15 @@ public  class Accounts {
 		Password = password;
 	}
 	
-	public List<Therapist> getUsersList() {
+	public Set<Therapist> getUsersList() {
 		return userList;
 	}
 	
-	public void setUserList(Therapist therapist) {
-		this.userList.add(therapist);
-	}
 
 	public void newUser(Therapist therapist) {
 		this.userList.add(therapist);
 	}
-	
-	
+
 	
 	
 	
