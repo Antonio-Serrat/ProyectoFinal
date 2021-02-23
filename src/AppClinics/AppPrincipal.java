@@ -3,16 +3,17 @@ package AppClinics;
 import java.util.List;
 import java.util.Scanner;
 
-import javax.security.auth.login.AccountException;
 
+import dataBase.*;
 import entities.*;
 
-import java.util.InputMismatchException;
+
 
 	public class AppPrincipal {
 
 		public static void main(String[] args) {
 			Accounts accounts = null;
+			//DataBase db = new DataBase();
 			
 			Scanner sc = new Scanner(System.in);
 	
@@ -30,15 +31,20 @@ import java.util.InputMismatchException;
 			sc.nextLine();
 		
 			switch (opcion) {
-			case 1: accounts = logIn(sc);
+					
+			case 1: 
+				//accounts = logIn(sc);
+				DataBase.logIn(sc);
 				break;
-			case 2: accounts = singIn(sc);
+			case 2:
+				DataBase.singIn(sc);
+				//accounts = singIn(sc);
 				break;
 
 			}
 		}
 	}
-
+/*
 		private static Accounts logIn(Scanner sc) {
 			
 			System.out.println("****************************");
@@ -64,11 +70,9 @@ import java.util.InputMismatchException;
 		
 			return null;
 		}
-		
+
 		public static Accounts singIn(Scanner sc) {
-			 
-			Therapist therapist = new Therapist(null, null);
-			therapist.getAccountsList();
+		
 			if(Accounts.userList != null) {
 				
 				System.out.println("Que gusto volver a vernos!");
@@ -77,10 +81,10 @@ import java.util.InputMismatchException;
 				String user = sc.nextLine();
 				System.out.println("Ingrese su Contraseña");
 				String pass = sc.nextLine();
-				Accounts account = new Accounts(user,pass);
+				Accounts accountSing = new Accounts(user,pass);
 				
-				for(Accounts i : therapist.accountsList) {
-					if (account.User().equals(therapist.accountsList)) {
+				for(Therapist i : Accounts.userList) {
+					if (accountSing.User().equals(Accounts.userList)) {
 						System.out.println("JAJA estamos logrando");
 					}
 				}
@@ -89,7 +93,7 @@ import java.util.InputMismatchException;
 				System.out.println("Usted no posee una cuenta");
 				return null;
 		}
-		
+		*/
 				
 		
 		
