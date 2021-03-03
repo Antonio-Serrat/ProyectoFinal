@@ -14,10 +14,12 @@ public class Therapist {
 	//public static List <Accounts> accountsList;
 	public static List <Patients> patientsList;
 	
-	public Therapist(String name, String speciality, String email) {
+	public Therapist(String name, String speciality, String email,String dni, String tlf) {
 		this.Name = name;
 		this.Specialty = speciality;
 		this.email = email;
+		this.DNI = dni;
+		this.tlf = tlf;
 		//this.accountsList = new ArrayList<>();
 		this.patientsList = new ArrayList<>();	}
 

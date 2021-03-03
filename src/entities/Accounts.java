@@ -16,8 +16,11 @@ public  class Accounts {
 	public Accounts(String User, String pass){
 		this.Password = pass;
 		this.Username = User;
-		this.userList = new HashSet<>();
+		//this.userList = new HashSet<>();
+		
 	}
+
+
 
 	public String User() {
 		return Username +""+ Password;

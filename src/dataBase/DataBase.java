@@ -11,23 +11,30 @@ import java.util.Set;
 import entities.*;
 
 public class DataBase {
-	List<Accounts> usuarios = new ArrayList<>();
+	
+	Set<Accounts> users = new HashSet<>();
 	Map<Integer, TherapistMenu> menu = new HashMap<>();
 	Set<Therapist> therapist = new HashSet<>();
+	List<Patients> patients = new ArrayList<>();
 	
-	public static Accounts logIn(Scanner sc) {
+	
+	
+	public  void singIn(Scanner sc) {
 		DataBase db = new DataBase();
-		
 		
 		System.out.println("****************************");
 		System.out.println("Welcome to D.B. Salud");
 		System.out.println("****************************");
 		
-		System.out.println("******Datos Personales******");
+		System.out.println("******Para registrarse ingrese sus datos personales******");
 		System.out.println("Por favor ingrese su nombre ");
-		String name = (sc.nextLine());
+		String Name = (sc.nextLine());
 		System.out.println("Ingrese su ocupación");
-		String specialty = (sc.nextLine());
+		String Specialty = (sc.nextLine());
+		System.out.println("Ingrese su D.N.I");
+		String dni = (sc.nextLine());
+		System.out.println("Ingrese su Telefono");
+		String tlf = (sc.nextLine());
 		System.out.println("Ingrese su email");
 		String email = (sc.nextLine());
 		System.out.println("******Datos de Usuario******");
@@ -36,20 +43,23 @@ public class DataBase {
 		System.out.println("Ingrese su Contraseña");
 		String pass = sc.nextLine();
 		System.out.println("****************************");
-		System.out.println("****¡Log in completado!*****");
-		Therapist therapist = new Therapist(name, specialty, email); 
+		System.out.println("****¡Registro completado!*****");
+		Therapist therapist = new Therapist(Name, Specialty, email, dni, tlf); 
 		Accounts account = new Accounts(usrName, pass);
-		account.newUser(therapist);
+		//account.newUser(therapist);
 		//therapist.newAccount(account);
-		db.setUsuarios(account);
-		db.setTherapist(therapist);
-	
-		return null;
+		setUsers(account);
+		setTherapist(therapist);
+
 	}
+
 	
-	public static Accounts singIn(Scanner sc) {
+	public void logIn(Scanner sc) {
 		
-		if(Accounts.userList != null) {
+		if(users.isEmpty()) {
+			System.out.println("No hay cuentas agregadas");
+		}else {
+			
 			
 			System.out.println("Que gusto volver a vernos!");
 			System.out.println("****************************");
@@ -57,33 +67,55 @@ public class DataBase {
 			String user = sc.nextLine();
 			System.out.println("Ingrese su Contraseña");
 			String pass = sc.nextLine();
-			Accounts accountSing = new Accounts(user,pass);
+		
 			
-			for(DataBase. : Accounts.userList) {
-				if (accountSing.User().equals(Accounts.userList)) {
-					System.out.println("JAJA estamos logrando");
+			for(Accounts i : users ){
+				if (i.getUsername().equals(user) && i.getPassword().equals(pass)){
+					System.out.println("HOla wsah");
+					menuTherapist();
+					
 				}
 			}
 		}
-		else 
-			System.out.println("Usted no posee una cuenta");
-			return null;
+
 	}
 
-	public List<Accounts> getUsuarios() {
-		return usuarios;
+
+	public Set<Accounts> getUsers() {
+		return users;
 	}
 
-	public  void setUsuarios(Accounts usuarios) {
-		this.usuarios.add(usuarios); 
+	
+	public void setUsers(Accounts users) {
+		this.users.add(users);
 	}
 
-	public Map<Integer, TherapistMenu> getMenu() {
-		return menu;
+	public List<Patients> getPatients() {
+		return patients;
 	}
 
-	public void setMenu(Map<Integer, TherapistMenu> menu) {
-		this.menu = menu;
+
+	public void setPatients(List<Patients> patients) {
+		this.patients = patients;
+	}
+
+
+
+	public  Map<Integer, TherapistMenu> menuTherapist() {
+		
+		Map<Integer , TherapistMenu> mapa = new HashMap<Integer, TherapistMenu>();
+		System.out.println("*-*-*--*-*-*-*-*-*-D.B. Salud-*-*-*-*-*-*-*");
+		System.out.println("-*-Bienvenido "+ Therapist.class.getName()+"-*-");
+		
+		mapa.put(1, new TherapistMenu(1,"Ver Pacientes"));
+		mapa.put(2, new TherapistMenu(2,"Agregar paciente"));
+		mapa.put(3, new TherapistMenu(3,"Quitar Pacientes"));
+		mapa.put(4, new TherapistMenu(4,"Ver Agenda"));
+		mapa.put(5, new TherapistMenu(5,"Ver Turnos"));
+		mapa.put(6, new TherapistMenu(6,"Agregar Turno"));
+		mapa.put(7, new TherapistMenu(7,"Quitar Turno"));
+		
+		return mapa;
 	}
 
 	public Set<Therapist> getTherapist() {

@@ -12,8 +12,8 @@ import entities.*;
 	public class AppPrincipal {
 
 		public static void main(String[] args) {
-			Accounts accounts = null;
-			//DataBase db = new DataBase();
+			Accounts accounts ;
+			DataBase db = new DataBase();
 			
 			Scanner sc = new Scanner(System.in);
 	
@@ -34,10 +34,10 @@ import entities.*;
 					
 			case 1: 
 				//accounts = logIn(sc);
-				DataBase.logIn(sc);
+				db.singIn(sc);
 				break;
 			case 2:
-				DataBase.singIn(sc);
+				db.logIn(sc);
 				//accounts = singIn(sc);
 				break;
 
